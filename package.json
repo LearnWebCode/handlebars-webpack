@@ -1,0 +1,16 @@
+{
+  "name": "brads-handlebars-workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars": "^4.0.6",
+    "handlebars-loader": "^1.4.0",
+    "path": "^0.12.7"
+  }
+}

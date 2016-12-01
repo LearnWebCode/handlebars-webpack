@@ -1,0 +1,23 @@
+{{#each pets}}
+  <div class="pet">
+    <div class="photo-column">
+      <img src="{{photo}}">
+    </div>
+
+    <div class="info-column">
+      <h2>{{name}} <span class="species">({{species}})</span></h2>
+
+      <p>Age: {{$calculateAge birthYear}}</p>
+
+      {{#if favFoods}}
+      <h4 class="headline-bar">Favorite Foods</h4>
+      <ul class="favorite-foods">
+        {{#each favFoods}}
+          <li>{{{this}}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+
+    </div>
+  </div>
+{{/each}}
