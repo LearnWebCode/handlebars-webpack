@@ -1,17 +1,20 @@
-var path = require("path");
+const path = require("path");
 
 module.exports = {
   entry: "./js/main.js",
   output: {
-    path: "./js",
+    path: path.resolve(__dirname, "./js"),
     filename: "main-bundled.js"
   },
-  resolve: {
-    fallback: path.join(__dirname, "js/helpers")
-  },
   module: {
-    loaders: [
-      {test: /\.hbs$/, loader: "handlebars-loader"}
+    rules: [
+      {
+        test: /\.hbs$/,
+        use: [{
+          loader: "handlebars-loader",
+          options: {helperDirs: path.resolve(__dirname, "./js/helpers")}
+        }]
+      }
     ]
   }
 };
